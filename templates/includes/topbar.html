@@ -4,19 +4,36 @@
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-7">
                 <div class="list-inline">
-                    <a href="tel:+55-4XX-634-7071"><i class="fa fa-phone"></i>+91 8447-7938-80</a>
-                    <a href="tel:info@themevessel.com"><i class="fa fa-envelope"></i>info@carzone.com</a>
-                    <a href="tel:info@themevessel.com"><i class="fa fa-clock-o"></i>Mon - Sun: 8:00am - 6:00pm</a>
+                    <i class="fa fa-phone" style="color:white;">+91 8447-7938-80</i>
+                    <i class="fa fa-envelope" style="color:white;"> info@carzone.com</i>
+                    <i class="fa fa-clock-o" style="color:white;"> Mon - Sun: 8:00am - 6:00pm</i>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-5">
                 <ul class="top-social-media pull-right">
+                    {% if user.is_authenticated %}
                     <li>
-                        <a href="login.html" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>
+                        <a href="{% url 'dashboard' %}" class="sign-in"><i class="fa fa-technometer"></i> Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:{ document.getElementById('logout').submit()}" class="sign-out"><i class="fa fa-sign-out"></i> Logout</a>
+                        <form action="{% url 'logout' %}" id="logout" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
+                    </li>
+
+                    logout
+                    {% else %}
+
+                    <li>
+                        <a href="{% url 'login' %}" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>
                     </li>
                     <li>
-                        <a href="signup.html" class="sign-in"><i class="fa fa-user"></i> Register</a>
+                        <a href="{% url 'register' %}" class="sign-in"><i class="fa fa-user"></i> Register</a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
