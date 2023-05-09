@@ -158,3 +158,10 @@ MESSAGE_TAGS = {
 }
 SOCIALACCOUNT_LOGIN_ON_GET = True
 SITE_ID = 1
+
+#sending mails
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'mnksharma71@gmail.com'
+EMAIL_HOST_PASSWORD = 'vkatszozllkaxymy'
+EMAIL_USE_TLS = True

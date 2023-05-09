@@ -13,9 +13,9 @@ class Contact(models.Model):
     state = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)
-    message = models.TextField(blank='true')
-    user_id = models.IntegerField(blank='true')    
-    create_date = models.DateTimeField(blank='true',default=datetime.now)
+    message = models.TextField(blank=True)
+    user_id = models.IntegerField(blank=True)    
+    create_date = models.DateTimeField(blank=True,default=datetime.now)
 
     def __str__(self):
         return self.email
