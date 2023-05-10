@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% block title %} | Available Cars{% endblock %}
 {%block content%}
 {%load humanize%}
 <!-- Sub banner start -->
@@ -28,7 +28,7 @@
                         <div class="car-box-3">
                             <div class="car-thumbnail">
                                 <a href="{% url 'car_detail' car.id %}" class="car-img" >
-                                    <div class="tag">For Rent</div>
+                                    <div class="tag">For Sale</div>
                                     <div class="price-box">
                                         <span>₹ {{car.price | intcomma}}</span>
                                     </div>
@@ -209,11 +209,11 @@
                         <h5 class="sidebar-title">Follow us</h5>
                         <div class="social-list clearfix">
                             <ul>
-                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
-                                <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.facebook.com" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.twitter.com" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.googleplus.com" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
+                                
+                                <li><a href="https://www.linkedin.com" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
                             </ul>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% block title %} | Dashboard{% endblock %}
 
 {% block content %}
 {% load static %}
@@ -39,7 +39,7 @@
 			<tbody>
 				{% for inquiry in inquiries %}
 			  <tr>
-				<th scope="row">1</th>
+				<th scope="row">{{forloop.counter}}</th>
 				<td>{{inquiry.car_title}}</td>
 				<td>{{inquiry.city}}</td>
 				<td><a href="{% url 'car_detail' inquiry.car_id %}" class="btn btn-outline-dark">View Car</a></td>

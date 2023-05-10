@@ -1,4 +1,6 @@
-{%extends 'base.html'%} {%block content%}
+{%extends 'base.html'%}
+{% block title %} | Contact{% endblock %}
+{%block content%}
 
 <!-- Sub banner start -->
 <div class="sub-banner overview-bgi">
@@ -19,7 +21,7 @@
   <div class="container">
     <!-- Main title -->
     <div class="main-title text-center">
-      <h1><p>We are here to help you?</p></h1>
+      <h1>We are here to <span> help you?</span></h1>
     </div>
     <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data"> 
       {% include 'includes/messages.html' %}
