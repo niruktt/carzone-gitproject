@@ -163,5 +163,5 @@ SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'mnksharma71@gmail.com'
-EMAIL_HOST_PASSWORD = 'vkatszozllkaxymy'
+EMAIL_HOST_PASSWORD = 'dyexpozezwmhjins'
 EMAIL_USE_TLS = True
